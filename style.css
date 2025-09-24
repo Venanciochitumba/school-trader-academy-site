@@ -1,0 +1,13 @@
+body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #007bff, #28a745); color: white; padding: 1rem 0; }
+.section { padding: 60px 0; }
+.aside { background: #e9ecef; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #28a745; }
+.cta-btn { background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+.cta-btn:hover { background: #218838; color: white; }
+.pricing-table { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+footer { background: #343a40; color: white; padding: 20px 0; text-align: center; margin-top: 40px; }
+.feature-list { list-style: none; padding: 0; }
+.feature-list li { padding: 10px 0; border-bottom: 1px solid #dee2e6; }
+.feature-list li:last-child { border-bottom: none; }
+.feature-list li i { color: #28a745; margin-right: 10px; }
+@media (max-width: 768px) { h1, h2, h3 { font-size: 90%; } .cta-btn { width: 100%; text-align: center; }}

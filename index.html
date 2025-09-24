@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="School Trader Academy AOA: Plataforma completa de cursos de trading e investimentos em Angola. Aprenda com experts e invista com confiança.">
+    <title>School Trader Academy AOA - Cursos de Trading e Investimentos</title>
+    <!-- Bootstrap CDN para responsividade e layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand fs-3" href="#home"><i class="fas fa-chart-line"></i> School Trader Academy AOA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home" data-lang="pt">Início</a><a class="nav-link d-none" href="#home" data-lang="en">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#visao-geral" data-lang="pt">Sobre</a><a class="nav-link d-none" href="#visao-geral" data-lang="en">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas" data-lang="pt">Características</a><a class="nav-link d-none" href="#caracteristicas" data-lang="en">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estrutura" data-lang="pt">Estrutura</a><a class="nav-link d-none" href="#estrutura" data-lang="en">Structure</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#loja" data-lang="pt">Loja</a><a class="nav-link d-none" href="#loja" data-lang="en">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#precos" data-lang="pt">Preços</a><a class="nav-link d-none" href="#precos" data-lang="en">Pricing</a></li>
+                    <li class="nav-item">
+                        <select id="lang-switcher" class="form-select form-select-sm">
+                            <option value="pt">PT</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="section text-center">
+        <div class="container">
+            <h1 data-lang="pt">Bem-vindo à School Trader Academy AOA</h1>
+            <h1 class="d-none" data-lang="en">Welcome to School Trader Academy AOA</h1>
+            <p data-lang="pt">Aprenda trading e investimentos com especialistas de confiança em Angola.</p>
+            <p class="d-none" data-lang="en">Learn trading and investments with trusted experts in Angola.</p>
+            <a href="#precos" class="cta-btn" data-lang="pt">Comece Agora</a>
+            <a href="#precos" class="cta-btn d-none" data-lang="en">Start Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p data-lang="pt">&copy; 2025 School Trader Academy AOA - Todos os direitos reservados.</p>
+        <p class="d-none" data-lang="en">&copy; 2025 School Trader Academy AOA - All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                if (el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('d-none');
+                } else {
+                    el.classList.add('d-none');
+                }
+            });
+            document.getElementById('lang-switcher').value = lang;
+        }
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('en')) { setLanguage('en'); } else { setLanguage('pt'); }
+        document.getElementById('lang-switcher').addEventListener('change', function() { setLanguage(this.value); });
+    </script>
+</body>
+</html>
